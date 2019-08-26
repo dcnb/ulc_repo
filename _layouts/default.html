@@ -5,7 +5,22 @@
   </head>
 
   <body>
-    {% include site-nav.html %}
+    <header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+      <h1 class="display-1 text-center">{{site.title}}</h1>
+          </div>
+        </div>
+          <div class="row">
+              <div class="col-12">
+          {% include site-nav.html %}
+              </div> 
+        </div>
+      </div>
+    </header>
+    
+  
     <main role="main">
     {{ content }}
     </main>

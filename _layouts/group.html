@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<div class="container mt-4">
+    <div class="row">
+     <div class="col-sm-9">
+<h2>{{page.title}}</h2>
+<ul>
+    <li>Established: {{page.established}}</li>
+    <li>Listserv: <a href="mailto:{{page.listserv}}">{{page.listserv}}</a></li>
+    <li>Chair: {{page.chair}}</li>
+    {%for doc in site.data[page.group-id].official_docs%}
+            <li>{%if doc.type%}{{doc.type | capitalize}}: {%endif%}<a href="{{doc.link}}">{{doc.title}}</a></li>
+            {%endfor%}
+</ul>
+<p>{{page.overview}}</p>
+{{content}}
+<div class="card">
+        <div class="card-header">Important Resources</div>
+        <div class="card-body">
+            {%for resource in site.data[page.group-id].resources%}
+            <dt><a href="{{resource.link}}">{{resource.title}}</a></dt>
+            {%if resource.description%}<dd>{{resource.description}}</dd>{%endif%}
+            {%endfor%}
+        </div> 
+</div>
+     </div>
+     <div class="col-sm-3">
+            <div class="card">
+                    <div class="card-header">Meeting Minutes</div>
+                    <div class="card-body">
+                        {%for minutes in site.data[page.group-id].meeting_minutes%}
+                        <dt><a href="{{minutes.link}}">{{minutes.date}}</a></dt>
+                        {%endfor%}
+                    </div> 
+            </div>
+            <div class="card mt-4">
+                    <div class="card-header">Roster</div>
+                    <div class="card-body">
+                        {%for member in site.data[page.group-id].roster%}
+                        <dt><a href="{{member.link}}">{{member.name}}</a> <a href="mailto:{{member.email}}"><i class="fas fa-envelope"></i></a></dt>
+                        <dd>{{member.institution}}</dd>
+                        {%endfor%}
+                    </div> 
+            </div>
+
+</div>
