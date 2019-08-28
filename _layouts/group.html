@@ -3,10 +3,11 @@ layout: default
 ---
 {% assign rosters = site.data.rosters %}
 {% assign groups = site.data.groupinfo %}
+{% assign kpis = site.data.kpis %}
 <div class="container mt-4">
     <div class="row">
      <div class="col-sm-9">
-<h2>{%for group in groups%}{%if group.object-id == page.group-id %}<a href="{{group.link}}">{{group.title}}</a>{%endif%}{%endfor%} <small><sup><i class="fas fa-external-link-alt"></i></sup></small></h2>
+<h2>{%for group in groups%}{%if group.object-id == page.group-id %}<a target="_blank" href="{{group.link}}">{{group.title}}</a>{%endif%}{%endfor%} <small><sup><i class="fas fa-external-link-alt"></i></sup></small></h2>
 <ul>
     <li>Established: {{page.established}}</li>
     <li>Listserv: <a href="mailto:{{page.listserv}}">{{page.listserv}}</a></li>
@@ -15,7 +16,8 @@ layout: default
             <li>{%if doc.type%}{{doc.type | capitalize}}: {%endif%}<a href="{{doc.link}}">{{doc.title}}</a></li>
             {%endfor%}
 </ul>
-<p>{{page.overview}}</p>
+<dt>KPI</dt>
+{%for kpi in kpis%}{%if kpi.group contains page.group-id%}<dd class="mb-2"> - {{kpi.text}}</dd>{%endif%}{%endfor%}
 {{content}}
 <div class="card">
         <div class="card-header">Important Resources</div>
@@ -42,7 +44,7 @@ layout: default
                         {%for member in rosters%}
                         {%if member.team == page.group-id%}
                         <dt>{%if member.link%} <a href="{{member.link}}">{{member.name}}</a>{%else%}{{member.name}}{%endif%} <a href="mailto:{{member.email}}"><i class="fas fa-envelope"></i></a></dt>
-                        <dd>{{member.institution}}</dd>
+                        <dd>{%if member.role contains "chair"%} <em>{{member.role | capitalize}}</em><br/>{%endif%}{{member.institution}}</dd>
                         {%endif%} {%endfor%}
                     </div> 
             </div>
