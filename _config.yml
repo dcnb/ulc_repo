@@ -12,7 +12,6 @@ collections:
   posts:
     title: Posts
     output: true
-    layout: page
   uploads:
     title: Uploads
     output: true
