@@ -12,4 +12,3 @@ overview: The Unique & Local Content Team provides broad oversight and leadershi
 layout: home
 ---
 
-![IMG_4283.jpg](/uploads/IMG_4283.jpg)
