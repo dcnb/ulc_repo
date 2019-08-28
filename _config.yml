@@ -8,6 +8,7 @@ collections:
   blog:
     title: Posts
     output: true
+    layout: page
   posts:
     title: Posts
     output: true
