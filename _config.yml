@@ -5,6 +5,9 @@ collections:
   groups:
     title: Groups
     output: true
+  blog:
+    title: Posts
+    output: true
   posts:
     title: Posts
     output: true
