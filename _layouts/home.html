@@ -19,16 +19,6 @@ layout: default
 <dt>Overview</dt>
 <dd class="my-2"> {{page.overview}}</dd>
 {{content}}
-
-<div class="card mt-4">
-    <div class="card-header">Groups</div>
-    <div class="card-body">
-        {% for group in site.groups %}
-        <dt><a href="{{ group.url | relative_url }}">{{group.title}}</a></dt>
-        <dd>Listserv:<a href="mailto:{{group.listserv}}">{{group.listserv}}</a></dd>
-         {%endfor%}
-    </div> 
-</div>
 <div class="card">
         <div class="card-header">Important Resources</div>
         <div class="card-body">
@@ -48,7 +38,15 @@ layout: default
                         {%endfor%}
                     </div> 
             </div>
-           
+            <div class="card mt-4">
+                <div class="card-header">Groups</div>
+                <div class="card-body">
+                    {% for group in site.groups %}
+                    <dt><a href="{{ group.url | relative_url }}">{{group.group-id | upcase}}</a> | <a href="mailto:{{group.listserv}}"><i class="fas fa-envelope"></i></a></dt>
+                  
+                     {%endfor%}
+                </div> 
+        </div>
 
             <div class="card mt-4">
                     <div class="card-header">Roster</div>
