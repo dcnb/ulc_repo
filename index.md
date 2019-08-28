@@ -1,6 +1,5 @@
 ---
 title: Unique and Local Content Team
-layout: home
 group-id: ulc
 overview: The Unique & Local Content Team provides broad oversight and leadership
   for the development, stewardship and dissemination of unique and local content.
@@ -10,5 +9,7 @@ overview: The Unique & Local Content Team provides broad oversight and leadershi
   and implements solutions for unique content needs, recommends consortium-wide practices,
   and supports an integrated approach for publishing, storing, discovering and preserving
   resources in our special collections, archives, and digital repositories.
+layout: home
 ---
 
+![IMG_4283.jpg](/uploads/IMG_4283.jpg)
