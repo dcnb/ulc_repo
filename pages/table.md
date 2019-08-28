@@ -1,9 +1,10 @@
 ---
 title: Table
+permalink: "/table/"
 layout: page
-permalink: /table/
 table-id: "#data"
 ---
+
 {%- assign data = site.data.example -%}
 
 # Table Example 

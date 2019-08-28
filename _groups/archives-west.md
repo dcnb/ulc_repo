@@ -1,15 +1,10 @@
 ---
-# Group Config Document
 title: Archives West Standing Group
 group-id: archives-west
-
-# Official Details
 established: 2019 July
 type: Project Group
 listserv: ulc-irp@orbiscascade.org
-overview: ""
+overview: ''
 timeline: FY2020 (July 2019 - June 2020)
 ---
-
-
 

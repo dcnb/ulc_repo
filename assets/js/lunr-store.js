@@ -1,6 +1,6 @@
 ---
-# create lunr store 
 ---
+
 {%- assign items = site.data.metadata -%}
 var store = [ 
     {% for item in items %} 

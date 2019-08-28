@@ -1,54 +1,30 @@
-# collectionbuilder-gh
-# a Jekyll Digital Collection Generator
-# designed for GitHub Pages
-
-# Site settings
-
-# title of site appears in banner
+---
 title: ULC Team Resources Site
-# tagline appears in banner
-tagline: a theme for building simple digital exhibits
-# description appears in meta tags and other locations
-# this description might appear in search result lists, keep around 160 characters max
-description: "CollectionBuilder-GH is a template for creating small digital collection exhibits on GitHub Pages designed for teaching digital library skills"
-# keywords appear in meta tags
-keywords: "ULC, Orbis Cascade Alliance, IR, Archives, OER, Digital Collections"
-# creator of the digital collection, to appear in meta tags
-author: dcnb
-
-
-# url is your gh-pages base, following the pattern: username.github.io
-url: https://dcnb.github.io
-# baseurl is your github repository's name prefixed with a /
-baseurl: /ulc_repo
-# repository is the github repository's full url
-repository: https://github.com/dcnb/ulc_repo
-
-# Theme Options
-# Use fontawesome CDN (true, false), https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css
-fontawesome: true
-
-# theme with Bootswatch (https://github.com/thomaspark/bootswatch)
-# Choose from: cerulean; cosmo; cyborg; darkly; flatly; journal; litera; lumen; lux; materia; minty; pulse; sandstone; simplex; sketchy; slate; solar; spacelab; superhero; united; yeti 
-bootswatch: # leave blank or comment out for plain bootstrap
-
-# google services [optional!]
-# leave these blank or comment out to NOT include google code
-# google-tracking-id: "UA-74844011-1"
-
-# build settings
-permalink: pretty
-
-# Note: use environment variable on build command to include analytics
-# JEKYLL_ENV=production jekyll build
-# (this is done automatically by gh-pages build)
-
+timezone: UTC
 collections:
   groups:
+    title: Groups
     output: true
-
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 defaults:
-  - scope:
-      type: groups
-    values:
-      layout: group
+- scope:
+    path: ''
+    type: groups
+  values:
+    layout: group
+tagline: a theme for building simple digital exhibits
+description: CollectionBuilder-GH is a template for creating small digital collection
+  exhibits on GitHub Pages designed for teaching digital library skills
+keywords: ULC, Orbis Cascade Alliance, IR, Archives, OER, Digital Collections
+author: dcnb
+url: https://dcnb.github.io
+baseurl: "/ulc_repo"
+repository: https://github.com/dcnb/ulc_repo
+fontawesome: true
+bootswatch: 
+permalink: pretty
